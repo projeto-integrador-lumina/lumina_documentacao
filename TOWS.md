@@ -78,17 +78,35 @@ A análise considera o estado atual do sistema, composto por um Dashboard web pa
 - Preparar um plano de contingência para a demonstração.
 - Documentar funcionalidades não concluídas e limitações conhecidas.
 
+
 ## 4. Plano de Contingência
 
-Para reduzir os riscos durante a apresentação final do Lumina, foram definidas as seguintes medidas:
+Para reduzir os riscos durante a apresentação final do Lumina, foram definidas medidas de contingência que permitam demonstrar as funcionalidades do sistema em tempo real, mesmo diante de possíveis falhas na infraestrutura principal.
 
 | Risco | Plano de Contingência |
 |---|---|
-| Falha de conexão com a internet | Disponibilizar uma gravação prévia demonstrando as funcionalidades principais. |
-| Indisponibilidade do backend ou banco de dados | Utilizar um vídeo de demonstração previamente gravado, sem depender da conexão com os serviços. |
-| Erro em alguma funcionalidade | Priorizar a apresentação dos fluxos previamente testados e documentar a limitação encontrada. |
-| Problemas de acesso ao aplicativo infantil | Demonstrar as funcionalidades por meio de um navegador previamente configurado ou utilizar a gravação de apoio. |
-| Tempo insuficiente para concluir melhorias | Concentrar os esforços nas funcionalidades essenciais e registrar as demais como atividades futuras. |
+| Falha de conexão com a internet | Executar o Dashboard, o aplicativo infantil e o backend localmente, utilizando um banco MongoDB instalado na máquina. |
+| Indisponibilidade do MongoDB Atlas | Alterar a configuração de conexão do backend para o MongoDB Community Server local, com os dados previamente preparados e gerenciados pelo MongoDB Compass. |
+| Indisponibilidade do backend hospedado | Executar o servidor Node.js localmente, mantendo a comunicação com o Dashboard e o aplicativo infantil. |
+| Erro em alguma funcionalidade | Priorizar a demonstração dos fluxos previamente testados e apresentar as limitações identificadas. |
+| Problemas de acesso ao aplicativo infantil | Executar a aplicação diretamente no navegador, utilizando o ambiente local previamente configurado. |
+| Tempo insuficiente para concluir melhorias | Priorizar a estabilidade das funcionalidades essenciais e registrar as demais como atividades futuras. |
+
+### 4.1 Ambiente Local de Contingência
+
+Como alternativa à infraestrutura principal, será preparado um ambiente de execução local, composto por:
+
+- Dashboard web executado localmente.
+- Aplicativo infantil acessado pelo navegador.
+- Backend Node.js executado localmente.
+- MongoDB Community Server instalado na máquina.
+- MongoDB Compass para gerenciamento e visualização dos dados.
+
+O ambiente utilizará dados fictícios previamente cadastrados, evitando a exposição de informações pessoais ou sensíveis.
+
+Antes da apresentação, serão realizados testes para verificar o funcionamento dos principais fluxos do sistema, garantindo que a demonstração possa ocorrer em tempo real, sem depender da disponibilidade do MongoDB Atlas.
+
+A utilização do ambiente local será uma medida de contingência, sem substituir a arquitetura principal do projeto, que continuará utilizando o MongoDB Atlas.
 
 ## 5. Direcionamento para a Sprint Final
 
